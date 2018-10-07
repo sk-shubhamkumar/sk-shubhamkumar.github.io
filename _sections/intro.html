@@ -7,11 +7,19 @@ icon: fa-comment
 order: 1
 ---
 <header>
-  <div class="avatar"><img src="{{site.avatar}}" alt=""></div>
+  <div class="avatar avatar-c"><img src="{{site.avatar}}" alt=""></div>
   <h2 class="alt">Hi! I'm <strong>{{site.author}}</strong></h2>
-  <div class="addr">Mohalla Radha Krishna Aliganj Etah 207247, Uttar Pradesh</div>
-  <div class="mob">{{site.mobile}}</div>
-  <div class="email">{{site.email}}</div>
+  {%- assign _icon = _page.icon | default: 'fa-link' -%}
+  {%- if _page.icon-style == 'regular' -%}
+    {%- assign _class = 'icon-r' -%}
+  {%- elsif _page.icon-style == 'brands' -%}
+    {%- assign _class = 'icon-b' -%}
+  {%- else -%}
+    {%- assign _class = 'icon' -%}
+  {%- endif -%}
+  <div class="addr"><span class="fa fa-map-marker {{ _class }}"></span> {{site.address}}</div>
+  <div class="mob"><span class="fa fa-mobile {{ _class }}"></span> {{site.mobile}}</div>
+  <div class="email"><span class="fa fa-envelope {{ _class }}"></span> {{site.email}}</div>
 </header>
 
 <!-- <footer>
