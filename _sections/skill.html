@@ -1,0 +1,21 @@
+---
+title: Skills
+icon: fa-th
+order: 4
+---
+
+
+<div class="row">
+    {%for skl in site.data.skills%}
+    <div class="6u 12u$(mobile)">
+        <div class="item-pro item-skl">
+            <div class="title-head">
+                <h1>{{skl.title}}<span class="" style="float: right">{{skl.desc}}</span></h1>
+            </div>
+            <div class="title-body skl-mtr" >
+                <div class="{{skl.title}}"  ></div>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+</div>

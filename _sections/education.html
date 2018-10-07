@@ -1,0 +1,22 @@
+---
+title: Education
+icon: fa-th
+order: 2
+---
+
+  <div class="row">
+      {%for edu in site.categories.education%}
+    <div class="12u 12u$(mobile)">
+        <div class="item-edu">
+            <div class="title-head">
+                <h1>{{edu.school}}</h1>
+            </div>
+            <div class="title-body">
+                <h3>{{edu.title}}{%if edu.subtitle%} in {{edu.subtitle}}{%endif%}</h3>
+                <h3>{{edu.duration}}</h3>
+                <h3>Percentage: {{edu.percentage}}</h3>  
+            </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>

@@ -1,0 +1,23 @@
+---
+title: Projects
+icon: fa-th
+order: 3
+---
+
+
+
+<div class="row">
+    {%for pro in site.categories.projects%}
+  <div class="12u 12u$(mobile)">
+      <div class="item-pro">
+          <div class="title-head">
+              <h1>{{pro.title}}</h1>
+          </div>
+          <div class="title-body">
+              <h3>{{pro.duration}}</h3>
+              <h3>{{pro.desc}}</h3>  
+          </div>
+    </div>
+  </div>
+  {%endfor%}
+</div>
